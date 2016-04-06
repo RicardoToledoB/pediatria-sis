@@ -8,18 +8,18 @@
         <meta name="keywords" content="Admin, Bootstrap 3, Template, Theme, Responsive">
         <!-- bootstrap 3.0.2 -->
         <link rel="stylesheet" href="<?php echo base_url("resources/css/bootstrap.min.css"); ?>" />
-       
+
         <!-- font Awesome -->
         <link rel="stylesheet" href="<?php echo base_url("resources/css/font-awesome.min.css"); ?>" />
-        
+
         <!-- Ionicons -->
         <link rel="stylesheet" href="<?php echo base_url("resources/css/ionicons.min.css"); ?>" />
-        
+
 
         <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
         <!-- Theme style -->
         <link rel="stylesheet" href="<?php echo base_url("resources/css/style.css"); ?>" />
-       
+
 
     </head>
     <body class="skin-black">
@@ -40,7 +40,7 @@
                 </a>
                 <div class="navbar-right">
                     <ul class="nav navbar-nav">
-                       
+
 
                         <!-- Tasks: style can be found in dropdown.less -->
                         <li class="dropdown tasks-menu">
@@ -118,31 +118,28 @@
                         <li class="dropdown user user-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <i class="fa fa-user"></i>
-                                <span>Jane Doe <i class="caret"></i></span>
+                                <span><?php echo $nombre  ?> <i class="caret"></i></span>
                             </a>
                             <ul class="dropdown-menu dropdown-custom dropdown-menu-right">
-                                <li class="dropdown-header text-center">Account</li>
+                                <li class="dropdown-header text-center">Mi Cuenta</li>
 
                                 <li class="divider"></li>
 
-                                    <li>
-                                        <a href="#">
+                                <li>
+                                    <a href="#">
                                         <i class="fa fa-user fa-fw pull-right"></i>
-                                            Profile
-                                        </a>
-                                        <a data-toggle="modal" href="#modal-user-settings">
-                                        <i class="fa fa-cog fa-fw pull-right"></i>
-                                            Settings
-                                        </a>
-                                        </li>
+                                        Perfil
+                                    </a>
 
-                                        <li class="divider"></li>
-
-                                        <li>
-                                            <a href="#"><i class="fa fa-ban fa-fw pull-right"></i> Logout</a>
-                                        </li>
-                                    </ul>
                                 </li>
+
+                                <li class="divider"></li>
+
+                                <li>
+                                    <a href=<?php echo (base_url() . 'index.php/login/log_out') ?>><i class="fa fa-ban fa-fw pull-right"></i> Logout</a>
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </nav>
@@ -157,34 +154,34 @@
                             <img src="<?php echo base_url("resources/img/avatar5.png"); ?>" class="img-circle" alt="User Image" />
                         </div>
                         <div class="pull-left info">
-                            <p>Hello, Jane</p>
+                            <p>Hola ,<?php echo $nombre  ?></p>
 
                             <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                         </div>
                     </div>
-                    
+
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <ul class="sidebar-menu">
                         <li>
-                            <a href="index.html">
-                                <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+                            <a href="home">
+                                <i class="fa fa-dashboard"></i> <span>Home</span>
                             </a>
                         </li>
+                        <li >
+                            <a href="usuario">
+                                <i class="fa fa-gavel"></i> <span>Usuario</span>
+                            </a>
+                        </li>
+
                         <li class="active">
-                            <a href="general.html">
-                                <i class="fa fa-gavel"></i> <span>General</span>
+                            <a href="rol">
+                                <i class="fa fa-globe"></i> <span>Rol</span>
                             </a>
                         </li>
 
                         <li>
-                            <a href="basic_form.html">
-                                <i class="fa fa-globe"></i> <span>Basic Elements</span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="simple.html">
-                                <i class="fa fa-glass"></i> <span>Simple tables</span>
+                            <a href="#">
+                                <i class="fa fa-glass"></i> <span>Reportes</span>
                             </a>
                         </li>
 
@@ -209,7 +206,7 @@
                         </div>
                     </div>
                     <div class="row">
-                            <div class="col-md-2">
+                        <div class="col-md-2">
                             <div class="stat">
                                 <div class="stat-icon" style="color:#fa8564;">
                                     <i class="fa fa-file-o fa-3x stat-elem"></i>
@@ -269,29 +266,29 @@
                                             Basic Progress Bars
                                         </header>
                                         <div class="panel-body"><p><code>.progress</code></p>
-                                          <div class="progress">
-                                            <div class="progress-bar progress-bar-primary progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                                              <span class="sr-only">40% Complete (success)</span>
+                                            <div class="progress">
+                                                <div class="progress-bar progress-bar-primary progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                                    <span class="sr-only">40% Complete (success)</span>
+                                                </div>
                                             </div>
-                                          </div>
-                                          <p>Class: <code>.sm</code></p>
-                                          <div class="progress progress-sm active">
-                                            <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-                                              <span class="sr-only">20% Complete</span>
+                                            <p>Class: <code>.sm</code></p>
+                                            <div class="progress progress-sm active">
+                                                <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                                    <span class="sr-only">20% Complete</span>
+                                                </div>
                                             </div>
-                                          </div>
-                                          <p>Class: <code>.xs</code></p>
-                                          <div class="progress progress-xs">
-                                            <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                                              <span class="sr-only">60% Complete (warning)</span>
+                                            <p>Class: <code>.xs</code></p>
+                                            <div class="progress progress-xs">
+                                                <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                                    <span class="sr-only">60% Complete (warning)</span>
+                                                </div>
                                             </div>
-                                          </div>
-                                          <p>Class: <code>.xxs</code></p>
-                                          <div class="progress progress-xxs">
-                                            <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                                              <span class="sr-only">60% Complete (warning)</span>
+                                            <p>Class: <code>.xxs</code></p>
+                                            <div class="progress progress-xxs">
+                                                <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                                    <span class="sr-only">60% Complete (warning)</span>
+                                                </div>
                                             </div>
-                                          </div>
                                         </div>
                                     </section>
                                     <!--progress bar end-->
@@ -299,15 +296,15 @@
                                 </div>
                             </div>
 
-                          
 
-                           
 
-                          
+
+
+
 
                         </div>
 
-                       
+
 
                     </div>
 
@@ -320,15 +317,15 @@
 
 
         <!-- jQuery 2.0.2 -->
-        
+
         <script type="text/javascript" src="<?php echo base_url("resources/js/jquery.min.js"); ?>"></script>
-       
+
 
         <!-- Bootstrap -->
         <script type="text/javascript" src="<?php echo base_url("resources/js/bootstrap.min.js"); ?>"></script>
-        
+
         <!-- Director App -->
         <script type="text/javascript" src="<?php echo base_url("resources/js/Director/app.js"); ?>"></script>
-        
+
     </body>
 </html>

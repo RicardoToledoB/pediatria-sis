@@ -82,14 +82,14 @@
                                             Ingresar al Sistema
                                         </header>
                                         <div class="panel-body">
-                                            <form>
+                                            <form method="post" action="login/log_in">
                                                 <div class="form-group">
-                                                    <label for="exampleInputEmail1">Email address</label>
-                                                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                                                    <label for="username">Username</label>
+                                                    <input type="username" class="form-control" name="username" id="username" placeholder="Username">
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="exampleInputPassword1">Password</label>
-                                                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                                    <label for="password">Password</label>
+                                                    <input type="password" class="form-control" name="password" id="password" placeholder="Password">
                                                 </div>
                                                 
                                                 

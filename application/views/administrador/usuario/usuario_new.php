@@ -8,18 +8,18 @@
         <meta name="keywords" content="Admin, Bootstrap 3, Template, Theme, Responsive">
         <!-- bootstrap 3.0.2 -->
         <link rel="stylesheet" href="<?php echo base_url("resources/css/bootstrap.min.css"); ?>" />
-       
+
         <!-- font Awesome -->
         <link rel="stylesheet" href="<?php echo base_url("resources/css/font-awesome.min.css"); ?>" />
-        
+
         <!-- Ionicons -->
         <link rel="stylesheet" href="<?php echo base_url("resources/css/ionicons.min.css"); ?>" />
-        
+
 
         <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
         <!-- Theme style -->
         <link rel="stylesheet" href="<?php echo base_url("resources/css/style.css"); ?>" />
-       
+
 
     </head>
     <body class="skin-black">
@@ -40,7 +40,7 @@
                 </a>
                 <div class="navbar-right">
                     <ul class="nav navbar-nav">
-                       
+
 
                         <!-- Tasks: style can be found in dropdown.less -->
                         <li class="dropdown tasks-menu">
@@ -118,31 +118,29 @@
                         <li class="dropdown user user-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <i class="fa fa-user"></i>
-                                <span>Jane Doe <i class="caret"></i></span>
+                                <span><?php echo $nombre ?><i class="caret"></i></span>
                             </a>
                             <ul class="dropdown-menu dropdown-custom dropdown-menu-right">
-                                <li class="dropdown-header text-center">Account</li>
+                                <li class="dropdown-header text-center">Mi Cuenta</li>
 
                                 <li class="divider"></li>
 
-                                    <li>
-                                        <a href="#">
+                                <li>
+                                    <a href="#">
                                         <i class="fa fa-user fa-fw pull-right"></i>
-                                            Profile
-                                        </a>
-                                        <a data-toggle="modal" href="#modal-user-settings">
-                                        <i class="fa fa-cog fa-fw pull-right"></i>
-                                            Settings
-                                        </a>
-                                        </li>
-
-                                        <li class="divider"></li>
-
-                                        <li>
-                                            <a href="#"><i class="fa fa-ban fa-fw pull-right"></i> Logout</a>
-                                        </li>
-                                    </ul>
+                                        Perfil
+                                    </a>
+                                    
                                 </li>
+
+                                <li class="divider"></li>
+
+                                <li>
+                                     <a href=<?php echo (base_url() . 'index.php/login/log_out') ?>><i class="fa fa-ban fa-fw pull-right"></i> Logout</a>
+                              
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </nav>
@@ -157,34 +155,34 @@
                             <img src="<?php echo base_url("resources/img/avatar5.png"); ?>" class="img-circle" alt="User Image" />
                         </div>
                         <div class="pull-left info">
-                            <p>Hello, Jane</p>
+                            <p>Hola , <?php echo $nombre ?></p>
 
                             <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                         </div>
                     </div>
-                    
+
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <ul class="sidebar-menu">
                         <li>
-                            <a href="index.html">
-                                <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+                            <a href="home">
+                                <i class="fa fa-dashboard"></i> <span>Home</span>
                             </a>
                         </li>
                         <li class="active">
-                            <a href="general.html">
-                                <i class="fa fa-gavel"></i> <span>General</span>
+                            <a href="usuario">
+                                <i class="fa fa-gavel"></i> <span>Usuario</span>
+                            </a>
+                        </li>
+
+                        <li >
+                            <a href="rol">
+                                <i class="fa fa-globe"></i> <span>Rol</span>
                             </a>
                         </li>
 
                         <li>
-                            <a href="basic_form.html">
-                                <i class="fa fa-globe"></i> <span>Basic Elements</span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="simple.html">
-                                <i class="fa fa-glass"></i> <span>Simple tables</span>
+                            <a href="#">
+                                <i class="fa fa-glass"></i> <span>Reportes</span>
                             </a>
                         </li>
 
@@ -209,7 +207,7 @@
                         </div>
                     </div>
                     <div class="row">
-                          
+
 
                     </div>
                     <div class="row">
@@ -222,7 +220,75 @@
                                             Administrador Usuario / Nuevo
                                         </header>
                                         <div class="panel-body">
-                                            
+                                            <!--tab nav start-->
+                                            <section class="panel general">
+                                                <header class="panel-heading tab-bg-dark-navy-blue">
+                                                    <ul class="nav nav-tabs">
+                                                        <li class="active">
+                                                            <a data-toggle="tab" href="#home">Home</a>
+                                                        </li>
+                                                        <li class="">
+                                                            <a data-toggle="tab" href="#about">About</a>
+                                                        </li>
+
+                                                    </ul>
+                                                </header>
+                                                <div class="panel-body">
+                                                    <div class="tab-content">
+                                                        <div id="home" class="tab-pane active">
+                                                           <form role="form">
+                                                                <div class="form-group">
+                                                                    <label for="nombre">Nombre</label>
+                                                                    <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="apepat">Apellido Paterno</label>
+                                                                    <input type="text" class="form-control" id="apepat" placeholder="Apellido Paterno">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="apemat">Apellido Materno</label>
+                                                                    <input type="text" class="form-control" id="apemat" placeholder="Apellido Materno">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="telefono">Telefono</label>
+                                                                    <input type="text" class="form-control" id="telefono" placeholder="Telefono">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="celular">Celular</label>
+                                                                    <input type="text" class="form-control" id="celular" placeholder="Celular">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="correo">Correo</label>
+                                                                    <input type="text" class="form-control" id="correo" placeholder="Correo">
+                                                                </div>
+                                                                
+                                                            </form>
+                                                        </div>
+                                                        <div id="about" class="tab-pane">
+                                                            <form role="form">
+                                                                <div class="form-group">
+                                                                    <label for="username">Nombre Usuario</label>
+                                                                    <input type="text" class="form-control" id="username" placeholder="Nombre Usuario">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="password">Clave Usuario</label>
+                                                                    <input type="password" class="form-control" id="apepat" placeholder="Clave de Usuario">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="rol">Rol</label>
+                                                                    <input type="text" class="form-control" id="apemat" placeholder="Rol ID">
+                                                                </div>
+                                                                
+                                                            </form>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <!--tab nav start-->
+
+
+                                            <input type="submit" class="btn btn-primary" value="Guardar">
                                         </div>
                                     </section>
                                     <!--progress bar end-->
@@ -230,15 +296,15 @@
                                 </div>
                             </div>
 
-                          
 
-                           
 
-                          
+
+
+
 
                         </div>
 
-                       
+
 
                     </div>
 
@@ -251,15 +317,15 @@
 
 
         <!-- jQuery 2.0.2 -->
-        
+
         <script type="text/javascript" src="<?php echo base_url("resources/js/jquery.min.js"); ?>"></script>
-       
+
 
         <!-- Bootstrap -->
         <script type="text/javascript" src="<?php echo base_url("resources/js/bootstrap.min.js"); ?>"></script>
-        
+
         <!-- Director App -->
         <script type="text/javascript" src="<?php echo base_url("resources/js/Director/app.js"); ?>"></script>
-        
+
     </body>
 </html>

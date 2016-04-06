@@ -1,16 +1,14 @@
 <?php
-
-class Usuario_model extends CI_Model{
+class Atencion_model extends CI_Model{
     public function __construct() {
         parent::__construct();
         $this->load->database();
         
     }
     public function list_all(){
-        $query=$this->db->query("select * from Usuario where estado='activo'");
+        $result=$this->db->query("select * from atencion");
         $this->db->close();
-        return $query;
+        return $result;
     }
     
 }
-
