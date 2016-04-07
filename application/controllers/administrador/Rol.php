@@ -33,6 +33,13 @@ class Rol extends CI_Controller {
         $data['tipo']=$this->session->userdata('tipo');
         $this->load->view('administrador/rol/rol_new',$data);
     }
+    
+    public function guardar(){
+        $tipo=$this->input->post('tipo');
+        $this->Rol_model->save($tipo);
+        redirect(base_url() . 'index.php/administrador/rol');
+        
+    }
 
     public function editar() {
         $data['id'] = $this->session->userdata('id');

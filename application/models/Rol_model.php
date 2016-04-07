@@ -12,4 +12,8 @@ class Rol_model extends CI_Model{
         return $query;
         
     }
+    public function save($tipo){
+        $this->db->query("insert into Rol(tipo) values('".$tipo."')");
+        $this->db->close();
+    }
 }

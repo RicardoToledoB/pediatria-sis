@@ -11,6 +11,10 @@ class Cita_model extends CI_Model{
         $this->db->close();
         return $result;
     }
+    public function save($fecha,$hora,$paciente_id,$estado,$usuario_id){
+        $this->db->query("insert into Cita(fecha,hora,paciente_id,estado,usuario_id) values('".$fecha."','".$hora."','".$paciente_id."','".$estado."','".$usuario_id."')");
+        $this->db->close();
+    }
     
 }
 

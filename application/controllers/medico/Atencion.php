@@ -30,6 +30,15 @@ class Atencion extends CI_Controller{
         $data['tipo']=$this->session->userdata('tipo');
         $this->load->view('medico/atencion/atencion_new',$data);
     }
+    public function guardar(){
+        $indicacion=$this->input->post('indicacion');
+        $cita_id=$this->input->post('cita_id');
+        //OBTENGO EL ID DE LA SESION
+        $usuario_id=$this->session->userdata('id');
+        $this->Usuario_model->save($indicacion,'activo',$cita_id,$usuario_id);
+        redirect(base_url() . 'index.php/medico/atencion');
+    }
+    
     public function editar(){
         $data['id'] = $this->session->userdata('id');
         $data['nombre'] = $this->session->userdata('nombre');

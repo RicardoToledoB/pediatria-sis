@@ -11,4 +11,9 @@ class Atencion_model extends CI_Model{
         return $result;
     }
     
+    public function save($indicacion,$estado,$cita_id,$usuario_id){
+        $this->db->query("insert into Atencion(indicacion,estado,cita_id,usuario_id) values('".$indicacion."','".$estado."','".$cita_id."','".$usuario_id."')");
+        $this->db->close();
+        
+    }
 }

@@ -31,6 +31,17 @@ class Cita extends CI_Controller{
         $data['tipo']=$this->session->userdata('tipo');
         $this->load->view('secretaria/cita/cita_new',$data);
     }
+    public function guardar(){
+        $fecha=$this->input->post('fecha');
+        $hora=$this->input->post('hora');
+        $paciente_id=$this->input->post('paciente_id');
+        $estado='activo';
+        $usuario_id=$this->session->userdata('id');
+        $this->Cita_model->save($fecha,$hora,$paciente_id,$estado,$usuario_id);
+        redirect(base_url() . 'index.php/secretaria/cita');
+        
+    }
+    
     public function editar(){
         $data['id'] = $this->session->userdata('id');
         $data['nombre'] = $this->session->userdata('nombre');

@@ -30,6 +30,20 @@ class Paciente extends CI_Controller{
         $data['tipo']=$this->session->userdata('tipo');
         $this->load->view('secretaria/paciente/paciente_new',$data);
     }
+    public function guardar(){
+        $rut=$this->input->post('rut');
+        $nombre=$this->input->post('nombre');
+        $apepat=$this->input->post('apepat');
+        $apemat=$this->input->post('apemat');
+        $telefono=$this->input->post('telefono');
+        $celular=$this->input->post('celular');
+        $direccion=$this->input->post('direccion');
+        $estado='activo';
+        $this->Paciente_model->save($rut,$nombre,$apepat,$apemat,$telefono,$celular,$direccion,$estado);
+        redirect(base_url() . 'index.php/secretaria/paciente');
+        
+    }
+    
     public function editar(){
         $data['id'] = $this->session->userdata('id');
         $data['nombre'] = $this->session->userdata('nombre');

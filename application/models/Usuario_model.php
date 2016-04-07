@@ -11,6 +11,9 @@ class Usuario_model extends CI_Model{
         $this->db->close();
         return $query;
     }
-    
+    public function save($nombre,$apepat,$apemat,$rol_id,$username,$password,$telefono,$ceular,$correo,$estado){
+        $this->db->query("insert into Usuario(nombre,apepat,apemat,rol_id,username,password,telefono,celular,correo,estado) values('".$nombre."','".$apepat."','".$apemat."','".$rol_id."','".$username."','".$password."','".$telefono."','".$ceular."','".$correo."','".$estado."')");
+        $this->db->close();
+    }
 }
 
