@@ -164,7 +164,7 @@
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <ul class="sidebar-menu">
                         <li >
-                            <a href="home">
+                            <a href="<?php echo (base_url() . 'index.php/medico/home'); ?>">
                                 <i class="fa fa-dashboard"></i> <span>Home</span>
                             </a>
                         </li>
@@ -175,7 +175,7 @@
                         </li>
 
                         <li class="active">
-                            <a href="atencion">
+                            <a href="<?php echo (base_url() . 'index.php/medico/atencion'); ?>">
                                 <i class="fa fa-globe"></i> <span>Atencion</span>
                             </a>
                         </li>

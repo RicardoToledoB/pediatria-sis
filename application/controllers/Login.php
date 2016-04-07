@@ -18,9 +18,7 @@ class Login extends CI_Controller{
         $password = $this->input->post('password');
         $data = $this->Login_model->validar($username, $password);
 
-        if ($data != false) {
-            // $dato["usuario"] = $this->Usuario_model->list_all();
-            // $this->load->view('usuario/usuario_index',$dato);
+        if($data != false) {
             $login=null;
             foreach ($data as $login) {
                 $usuario_data = array(

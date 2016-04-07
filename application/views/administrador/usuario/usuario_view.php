@@ -164,18 +164,18 @@
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <ul class="sidebar-menu">
                         <li>
-                            <a href="home">
+                            <a href="<?php echo (base_url() . 'index.php/administrador/home'); ?>">
                                 <i class="fa fa-dashboard"></i> <span>Home</span>
                             </a>
                         </li>
                         <li class="active">
-                            <a href="usuario">
+                            <a href="<?php echo (base_url() . 'index.php/administrador/usuario'); ?>">
                                 <i class="fa fa-gavel"></i> <span>Usuario</span>
                             </a>
                         </li>
 
                         <li >
-                            <a href="rol">
+                            <a href="<?php echo (base_url() . 'index.php/administrador/rol'); ?>">
                                 <i class="fa fa-globe"></i> <span>Rol</span>
                             </a>
                         </li>

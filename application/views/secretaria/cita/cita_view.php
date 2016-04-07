@@ -164,18 +164,19 @@
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <ul class="sidebar-menu">
                         <li >
-                            <a href="home">
+                            <a href="<?php echo (base_url() . 'index.php/secretaria/home'); ?>">
                                 <i class="fa fa-dashboard"></i> <span>Home</span>
                             </a>
                         </li>
                         <li >
-                            <a href="paciente">
+                            
+                            <a href="<?php echo (base_url() . 'index.php/secretaria/paciente'); ?>">
                                 <i class="fa fa-gavel"></i> <span>Pacientes</span>
                             </a>
                         </li>
 
                         <li class="active">
-                            <a href="cita">
+                            <a href="<?php echo (base_url() . 'index.php/secretaria/cita'); ?>">
                                 <i class="fa fa-globe"></i> <span>Citas</span>
                             </a>
                         </li>

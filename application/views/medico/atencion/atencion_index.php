@@ -164,7 +164,7 @@
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <ul class="sidebar-menu">
                         <li >
-                            <a href="home">
+                            <a href="<?php echo (base_url() . 'index.php/medico/home'); ?>">
                                 <i class="fa fa-dashboard"></i> <span>Home</span>
                             </a>
                         </li>
@@ -175,7 +175,7 @@
                         </li>
 
                         <li class="active">
-                            <a href="atencion">
+                            <a href="<?php echo (base_url() . 'index.php/medico/atencion'); ?>">
                                 <i class="fa fa-globe"></i> <span>Atencion</span>
                             </a>
                         </li>
@@ -268,7 +268,7 @@
                                         </header>
                                         <div class="panel-body table-responsive">
                                             <div class="box-tools m-b-15">
-                                                <a href="" class="btn btn-primary">Nuevo</a>
+                                                <a href="atencion/nuevo" class="btn btn-primary">Nuevo</a>
                                                 <div class="input-group">
                                                     <input type="text" name="table_search" class="form-control input-sm pull-right" style="width: 150px;" placeholder="Search"/>
                                                     <div class="input-group-btn">

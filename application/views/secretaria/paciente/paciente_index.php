@@ -118,28 +118,26 @@
                         <li class="dropdown user user-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <i class="fa fa-user"></i>
-                                <span>Jane Doe <i class="caret"></i></span>
+                                <span><?php echo $nombre ?> <i class="caret"></i></span>
                             </a>
                             <ul class="dropdown-menu dropdown-custom dropdown-menu-right">
-                                <li class="dropdown-header text-center">Account</li>
+                                <li class="dropdown-header text-center">Mi Cuenta</li>
 
                                 <li class="divider"></li>
 
                                 <li>
                                     <a href="#">
                                         <i class="fa fa-user fa-fw pull-right"></i>
-                                        Profile
+                                        Perfil
                                     </a>
-                                    <a data-toggle="modal" href="#modal-user-settings">
-                                        <i class="fa fa-cog fa-fw pull-right"></i>
-                                        Settings
-                                    </a>
+                                   
                                 </li>
 
                                 <li class="divider"></li>
 
                                 <li>
-                                    <a href="#"><i class="fa fa-ban fa-fw pull-right"></i> Logout</a>
+                                                <a href=<?php echo (base_url() . 'index.php/login/log_out') ?>><i class="fa fa-ban fa-fw pull-right"></i> Logout</a>
+                              
                                 </li>
                             </ul>
                         </li>
@@ -157,7 +155,7 @@
                             <img src="<?php echo base_url("resources/img/avatar5.png"); ?>" class="img-circle" alt="User Image" />
                         </div>
                         <div class="pull-left info">
-                            <p>Hello, Jane</p>
+                            <p>Hola , <?php echo $nombre ?></p>
 
                             <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                         </div>
@@ -166,18 +164,19 @@
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <ul class="sidebar-menu">
                         <li >
-                            <a href="home">
+                            <a href="<?php echo (base_url() . 'index.php/secretaria/home'); ?>">
                                 <i class="fa fa-dashboard"></i> <span>Home</span>
                             </a>
                         </li>
-                        <li class="active">
-                            <a href="paciente">
+                        <li class="active" >
+                            
+                            <a href="<?php echo (base_url() . 'index.php/secretaria/paciente'); ?>">
                                 <i class="fa fa-gavel"></i> <span>Pacientes</span>
                             </a>
                         </li>
 
                         <li >
-                            <a href="cita">
+                            <a href="<?php echo (base_url() . 'index.php/secretaria/cita'); ?>">
                                 <i class="fa fa-globe"></i> <span>Citas</span>
                             </a>
                         </li>
@@ -225,7 +224,7 @@
                                             <div class="box-tools m-b-15">
 
                                                 <div class="input-group">
-                                                    <a href="" class="btn btn-primary">Nuevo</a>
+                                                    <a href="paciente/nuevo" class="btn btn-primary">Nuevo</a>
                                                     <input type="text" name="table_search" class="form-control input-sm pull-right" style="width: 150px;" placeholder="Search"/>
                                                     <div class="input-group-btn">
                                                         <button class="btn btn-sm btn-default"><i class="fa fa-search"></i></button>
